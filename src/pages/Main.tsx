@@ -1,7 +1,6 @@
 import { useEffect } from "react";
-import { createPortal } from "react-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getProducts, productSlice, Status } from "../lib/feature/products";
+import { getProducts, Status } from "../lib/feature/products";
 import { AppDispatch, RootState } from "../lib/store";
 
 export const Main = () => {

@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
 import { axiosInstanse } from "../../axiosInstance";
 
 export enum Status {
@@ -54,6 +55,6 @@ export const productSlice = createSlice({
 });
 
 export const getProducts = createAsyncThunk("sneakers", async () => {
-  const { data } = await axiosInstanse.get("/products");
+  const { data } = await axios.get("https://fakestoreapi.com/products");
   return data;
 });
